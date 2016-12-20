@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  appium:
+    build: ./android/.
+    ports:
+       - "5554:5554"
+
+  android:
+    build: ./appium/.
+    ports:
+      - "4723:4723"
