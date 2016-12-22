@@ -9,7 +9,7 @@ script:
   - docker build -t appium appium/.
   - docker run -d --name appium-base appium-base
   - docker run -d --name appium-node appium
-  - docker run -d --name android-avd appium
+  - docker run -d --name android-avd android
   - docker ps
   - docker exec appium-node /bin/sh -c "appium-doctor --android"
   - docker exec android-avd /bin/sh -c "android list"
