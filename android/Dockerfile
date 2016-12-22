@@ -1,4 +1,4 @@
-FROM appium-base
+FROM irfanah/appium-base
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz" \
     ANDROID_BUILD_TOOLS_VERSION=25.0.0 \
@@ -41,6 +41,9 @@ RUN echo "no" | android create avd \
 #=======================================
 # Expose default port of adb
 #=======================================
-EXPOSE 5555
+EXPOSE 5554
+
+RUN mkdir -p /opt/android
+WORKDIR /opt/android
 
 CMD emulator64-arm -avd Nexus -no-boot-anim -no-window -noaudio -gpu off -port 5554
