@@ -1,4 +1,5 @@
 FROM ubuntu:16.04
+FROM ruby:2.3.3
 
 MAINTAINER Srinivasan Sekar <srinivasan.sekar1990@gmail.com>
 
@@ -123,6 +124,8 @@ RUN appium-doctor --android
 ENV UDEV_REMOTE_FILE https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
 RUN mkdir /etc/udev/rules.d \
   && wget --no-verbose $UDEV_REMOTE_FILE -O /etc/udev/rules.d/51-android.rules
+
+
 
 #=======================================
 # Expose default port of appium
