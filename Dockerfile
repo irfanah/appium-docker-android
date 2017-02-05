@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
 FROM ruby:2.3.3
+FROM ubuntu:16.04
 
 MAINTAINER Srinivasan Sekar <srinivasan.sekar1990@gmail.com>
 
